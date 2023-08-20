@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&family=Ubuntu:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carme&family=Dosis:wght@400;600&family=Lato:wght@300&family=Oswald:wght@300&family=Ubuntu:ital,wght@0,700;1,400&family=Varela+Round&display=swap');
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,300,400,700);
+
+
+body
+{
+    background-color: darkslategray;
+    background-image: url('pexels-edward-eyer-811838.jpg');
+    background-size: cover;
+
+}
+
+/* * selects all items in the html file its a univeral selector */
+* 
+{
+    margin: 0;
+    padding: 0;
+}
+
+nav
+{
+    font-family: 'Oswald', sans-serif;
+    
+    /* font-family: 'Varela Round', sans-serif; */
+}
+
+/* lets make nav bar a flexbox */
+
+nav ul
+{ 
+    /* all the elements of list in nav ta have got horizontal */
+    display: flex;
+    align-items: center;
+    /* list-style-type helps to edit the bullet format of the list to make navigation bar look good, here none means  no bullets */
+    list-style-type: none;
+    /* here change in hight will change the size of the logo */
+    height: 60px; 
+    background-color: rgb(0, 0, 0);
+    /* color of text in nav bar */
+    color: white;
+
+}
+
+
+/* access the li tag where spotify is written with logo using the brand class */
+
+nav ul li
+{
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+ .brand img
+{ 
+    width: 40px;
+    /* size of font */
+    font-size: 1.3rem;
+} 
+
+.brand
+{
+    
+    padding-top: 3px;
+    display: flex;
+    align-items: center;
+    /* font of spotify */
+    font-family: 'Varela Round', sans-serif;
+}
+
+/* or we can change the size of image as follows */
+
+/* image class/tag is used to edit size of image in css, and max hight width is set 100%     max-width: 100% max-height: 100%*/
+/* 
+img
+{
+    max-width: 100%;
+    max-height: 100%;
+}
+.brand
+{
+  width: 150px;
+  height: auto;    
+}  */
+.container
+{
+    /* this means 75% of height, min height means the height cannot be less than inputed value*/
+    /* height of the container linking park... that is in gray is increased at bottom and can be further increased but cant be decreased than given 75vh height */
+   min-height : 75vh;
+   font-family: 'Open Sans', sans-serif;
+   color: rgb(255, 255, 255);
+   background-color: black;
+   /* color alters the color of the text where as backgcolor changes the color or the container box */
+   padding: 5px;
+   /* by default the display of the flex box are set in a row to make a flexbox we need a parent box here container and child boxes here song lix\st and song banner it has to b added in the parent box  */
+   display: flex;
+    /* margin: 23px auto; this gives margin to the container from t b l r but adding auto it gets margin only in top bottom */
+    /*we are leaving 70 % margin from right, hamlog right me 70%b jagah chor rhe hai */
+    margin-right: 60%; 
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 34px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.heading
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.bottom
+{
+    position: sticky;
+    height: 100px;
+    background-color : black;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* to set the icons in order billow the range as written in html div class icons */
+    flex-direction: column;
+}
+
+.songInfo
+{
+    position: absolute;
+    display: flex;
+    /* moves left and leavs 4 % of width left space gap or margin; */
+    left: 4vw;
+}
+
+.songInfo img
+{
+    /* when we change opacity to 1 the gif will be visible, we do this to access play button with js so that if we play then only gif is visible */
+    opacity: 1;
+    /* we did the transition of opacity 0.4s ease in so that when we play masterplay the gif shows some transition to be displayed, and when we pause it it shows some transition to be paused; */
+    transition: opacity 0.4s ease-in;
+    
+}
+
+.icon
+{
+    /* we did this to ad some distance between progress bar  ; */
+    margin: 10px;
+}
+
+.icon i
+{
+    cursor: pointer ;
+}
+
+#ProgressBar
+{
+    /* vw means percentage of */
+    width: 80vw;
+    cursor: pointer;
+
+}
+
+.song1
+{
+    height: 50px;
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    background-color: rgb(20, 20, 20);
+    padding: 5px;
+    /* we added margin wo seperate each song box that is in gray */
+    margin-bottom: 5px;
+    border-radius: 5px;
+    width: 400px;
+    justify-content: space-around;
+}
+
+.song1 i
+{
+    cursor: pointer;
+}
+
+.songInfo
+{
+    position: absolute;
+    bottom: 5px;
+    font-family: 'Oswald', sans-serif;
+   
+}
+
+.songInfo img
+{
+    opacity: 0;
+    transition: opacity Is ease-in;
+}
+
+.timestamp
+{
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+
+
